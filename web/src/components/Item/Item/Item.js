@@ -86,6 +86,10 @@ const Item = ({ item }) => {
           </tbody>
         </table>
       </div>
+      <h1>IMAGE</h1>
+      {item.images.map((image, index) => {
+        return <img key={index} src={image.url} alt="" />
+      })}
       <nav className="rw-button-group">
         <Link
           to={routes.editItem({ id: item.id })}

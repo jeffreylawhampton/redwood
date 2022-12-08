@@ -14,6 +14,9 @@ export const QUERY = gql`
       userId
       roomId
       containerId
+      images {
+        url
+      }
     }
   }
 `

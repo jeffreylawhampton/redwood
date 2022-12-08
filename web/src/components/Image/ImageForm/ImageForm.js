@@ -1,3 +1,7 @@
+import { useState } from 'react'
+
+import { PickerInline } from 'filestack-react'
+
 import {
   Form,
   FormError,
@@ -9,8 +13,15 @@ import {
 } from '@redwoodjs/forms'
 
 const ImageForm = (props) => {
+  const [url, setUrl] = useState(props?.image?.url)
+
   const onSubmit = (data) => {
-    props.onSave(data, props?.image?.id)
+    const dataWithUrl = Object.assign(data, { url })
+    props.onSave(dataWithUrl, props?.image?.id)
+  }
+
+  const onFileUpload = (response) => {
+    setUrl(response.filesUploaded[0].url)
   }
 
   return (
@@ -40,7 +51,7 @@ const ImageForm = (props) => {
 
         <FieldError name="caption" className="rw-field-error" />
 
-        <Label
+        {/* <Label
           name="url"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -56,8 +67,11 @@ const ImageForm = (props) => {
           validation={{ required: true }}
         />
 
-        <FieldError name="url" className="rw-field-error" />
-
+        <FieldError name="url" className="rw-field-error" /> */}
+        <PickerInline
+          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
+          onSuccess={onFileUpload}
+        />
         <Label
           name="itemId"
           className="rw-label"
