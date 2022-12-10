@@ -11,11 +11,19 @@ export const QUERY = gql`
       value
       serialNumber
       quantity
-      userId
+      user {
+        name
+        rooms {
+          name
+        }
+      }
       roomId
-      containerId
+      container {
+        name
+      }
       images {
         url
+        caption
       }
     }
   }

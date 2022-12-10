@@ -18,6 +18,12 @@ export const QUERY = gql`
       userId
       roomId
       containerId
+      user {
+        name
+        rooms {
+          name
+        }
+      }
     }
   }
 `

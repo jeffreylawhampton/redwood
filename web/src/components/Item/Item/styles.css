@@ -1,0 +1,28 @@
+@media screen and (min-width: 1200px) {
+
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.page-wrapper div {
+    width: 100%;
+    min-width: 50%;
+}
+}
+
+.slider-icon {
+  width: 50px;
+}
+
+#previous {
+  transform: rotate(180deg);
+  position: absolute;
+  left:0
+}
+
+#next {
+  position: absolute;
+  right: 0
+}

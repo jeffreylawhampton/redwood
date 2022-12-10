@@ -9,6 +9,10 @@ import {
 } from '@redwoodjs/forms'
 
 const ItemForm = (props) => {
+  const roomsList = props.item.user.rooms.map((room) => {
+    return room.name
+  })
+  console.log(roomsList)
   const onSubmit = (data) => {
     props.onSave(data, props?.item?.id)
   }

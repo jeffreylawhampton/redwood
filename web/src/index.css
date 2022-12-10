@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display';
+}
+
+h5, h6, p, div, ol, ul, button, span {
+  font-family: 'Outfit';
+}
+

@@ -1,0 +1,18 @@
+.header {
+  min-height: 70px;
+  width: 100vw;
+  background: linear-gradient(to right, #3a506b, #aa748a);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 3%;
+  position: sticky;
+  top:0;
+  left: 0;
+}
+
+.header a {
+  color:white;
+  font-size: 24px;
+  text-decoration: none;
+}
